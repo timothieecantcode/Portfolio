@@ -1,1 +1,0 @@
-import{c as e,o as t}from"./index-Dbvi-y_H.js";const s={class:"flex justify-between items-center min-h-screen mt-20 lg:mt-0"},_={__name:"Hero",setup(c){return(n,o)=>(t(),e("section",s))}};export{_ as default};
