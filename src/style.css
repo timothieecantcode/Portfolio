@@ -8,6 +8,7 @@
 
   --font-doto: Doto, 'sans-serif';
   --font-rubik: Rubik Iso, 'system-ui';
+  --font-codystar: Codystar, 'system-ui';
 }
 
 @custom-variant dark (&:where(.dark, .dark *));

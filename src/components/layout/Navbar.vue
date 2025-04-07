@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="flex justify-between items-center p-8 lg:px-12 relative z-20">
-      <div class="text-3xl font-rubik text-auto">Timothie</div>
+      <div class="text-3xl lg:text-5xl font-rubik text-auto">Timothie</div>
 
       <!-- Mobile Toggle Button -->
       <div class="md:hidden z-30">
@@ -28,7 +28,7 @@
           <li v-for="item in Menu" :key="item.name">
             <a
               :href="item.href"
-              class="block transition ease-linear md:text-lg lg:text-xl font-bold md:text-secondary hover:text-accent dark:text-primary sm:dark:text-primary dark:hover:text-accent px-4 py-2 border-b-2 border-transparent hover:border-accent rounded-xl"
+              class="block transition ease-linear md:text-lg lg:text-2xl font-bold md:text-secondary hover:text-accent dark:text-primary sm:dark:text-primary dark:hover:text-accent px-4 py-2 border-b-2 border-transparent hover:border-accent rounded-xl"
               @click="scrollToSection(item.href)"
             >
               {{ item.name }}
@@ -47,7 +47,7 @@
             <Icon
               v-else
               icon="line-md:sunny-outline"
-              class="text-5xl text-primary hover:text-white hidden md:block"
+              class="text-5xl text-primary hover:text-accent"
             />
           </div>
         </button>

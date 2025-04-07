@@ -1,9 +1,114 @@
 <template>
-  <section class="flex justify-between items-center min-h-screen mt-20 lg:mt-0"></section>
+  <section class="flex justify-center items-center text-auto min-h-screen mt-20 lg:mt-0">
+    <header
+      class="absolute w-1/2 aspect-[16/5] -skew-x-12 rounded-full bg-gradient-to-r from-[#dbe2ea] via-[#3f72af] to-[#112d4e] opacity-30 dark:opacity-20 blur-[100px] left-10 top-0 hidden md:block"
+    ></header>
+    <header
+      class="absolute w-1/2 aspect-[16/5] -skew-x-12 rounded-full bg-gradient-to-r from-[#dbe2ea] via-[#3f72af] to-[#112d4e] opacity-30 dark:opacity20 blur-[100px] right-10 bottom-0 hidden md:block"
+    ></header>
+    <main class="absolute grid lg:grid-cols-2 grid-cols-1 items-center p-2 lg:p-8">
+      <header class="text-center lg:text-left lg:pr-20">
+        <h1 class="mb-6 text-4xl md:text-5xl lg:text-6xl font-bold">
+          Hello, I'm
+          <span
+            class="text-accent font-codystar text-shadow-2xs text-shadow-sky-300 text-shadow-lg/50"
+            >Timothie</span
+          >
+        </h1>
+
+        <!-- Button for user type -->
+        <ul class="flex flex-col items-center pb-5 space-y-5 md:flex-row md:space-x-5 md:space-y-0">
+          <li>
+            <button
+              class="pr-8 text-m md:text-2xl rounded-xl transition-colors font-bold"
+              :class="
+                activeType === 'anyone'
+                  ? 'text-secondary dark:text-primary font-bold'
+                  : 'text-gray-500'
+              "
+              @click="activeType = 'anyone'"
+            >
+              For anyone
+            </button>
+            <button
+              class="pr-8 text-m md:text-2xl rounded-xl transition-colors font-bold"
+              :class="
+                activeType === 'recruiter'
+                  ? 'text-secondary dark:text-primary font-bold'
+                  : 'text-gray-500'
+              "
+              @click="activeType = 'recruiter'"
+            >
+              Recruiters
+            </button>
+            <button
+              class="pr-8 text-m md:text-2xl rounded-xl transition-colors font-bold"
+              :class="
+                activeType === 'engineer'
+                  ? 'text-secondary dark:text-primary font-bold'
+                  : 'text-gray-500'
+              "
+              @click="activeType = 'engineer'"
+            >
+              Engineers
+            </button>
+          </li>
+        </ul>
+
+        <div class="relative text-lg mx-auto lg:mx-0 font-semibold h-[800px] overflow-auto">
+          <!-- Message for user type -->
+          <p
+            v-if="activeType === 'anyone'"
+            class="md:text-3xl max-w-3xl mx-auto lg:mx-0 font-semibold"
+          >
+            Thanks for stopping by! This is my little corner of the internet where I showcase my
+            journey as a software engineering student and share some projects I've worked on.
+            Whether you're here out of curiosity or exploring for inspiration, I hope you find
+            something that catches your eye. Feel free to browse around, and don't hesitate to reach
+            out if you have any questions, ideas, or just want to chat about all things tech. I
+            always enjoy connecting with new people!
+          </p>
+          <p
+            v-else-if="activeType === 'recruiter'"
+            class="md:text-3xl max-w-3xl mx-auto lg:mx-0 font-semibold"
+          >
+            Thank you for visiting my website. I'm thrilled to share my journey, skills, and
+            projects with you. As a software engineering student at the University of Adelaide, I am
+            passionate about creating innovative solutions that bridge hardware and software while
+            delivering practical applications. Feel free to explore my portfolio to see the projects
+            that reflect my dedication to continuous learning and problem-solving. If you have any
+            questions or would like to discuss potential opportunities, don't hesitate to reach out.
+            I look forward to connecting with you!
+          </p>
+          <p
+            v-else-if="activeType === 'engineer'"
+            class="md:text-3xl max-w-3xl mx-auto lg:mx-0 font-semibold"
+          >
+            Welcome, Fellow Engineers! I'm delighted to have you here exploring my portfolio. As a
+            software engineering student at the University of Adelaide, I enjoy tackling challenges
+            that merge hardware and software to create efficient and innovative solutions. My
+            academic journey, combined with hands-on experience as a PC builder and system
+            technician, has allowed me to dive deep into everything from digital logic design to web
+            application development. Feel free to browse through my projects, which reflect my
+            passion for continuous learning and my commitment to creating impactful solutions. I’m
+            always eager to collaborate, exchange ideas, and discuss exciting technologies. If you'd
+            like to connect or share insights, don’t hesitate to reach out!
+          </p>
+        </div>
+      </header>
+      <div class="justify-center items-center">
+        <img
+          src="@/assets/me.png"
+          alt="Me"
+          class="hidden md:block absolute top-0 right-0 object-cover w-[20%] h-auto mr-50"
+        />
+      </div>
+    </main>
+  </section>
 </template>
 
 <script setup>
-// No script needed for the basic Hero section
-</script>
+import { ref } from 'vue'
 
-<style scoped></style>
+const activeType = ref('anyone')
+</script>
