@@ -1,9 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Doto:wght,ROND@100..900,100&family=Rubik+Iso&display=swap');
 @import 'tailwindcss';
 
 @theme {
   --color-primary: #dbe2ef;
   --color-secondary: #112d4e;
   --color-accent: #3f72af;
+
+  --font-doto: Doto, 'sans-serif';
+  --font-rubik: Rubik Iso, 'system-ui';
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* Custom reusable class */
+.btn-nav {
+  @apply block transition ease-linear px-6 py-4 rounded-2xl md:text-xl lg:text-2xl font-bold text-secondary md:text-secondary hover:text-accent dark:text-primary dark:hover:text-white border-b-2 border-transparent hover:border-secondary dark:hover:border-primary;
+}
+
+.text-auto {
+  @apply text-secondary md:text-secondary dark:text-primary;
+}
