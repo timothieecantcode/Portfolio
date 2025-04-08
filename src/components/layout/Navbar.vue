@@ -1,7 +1,14 @@
 <template>
   <header>
-    <div class="flex justify-between items-center p-8 lg:px-12 relative z-20">
-      <div class="text-3xl lg:text-5xl font-rubik text-auto">Timothie</div>
+    <div class="flex justify-between items-center p-5 lg:px-12 relative z-20">
+      <div class="flex flex-cols space-x-10">
+        <div class="text-3xl lg:text-5xl font-rubik text-auto cursor-default">Timothie</div>
+        <img
+          alt="Me"
+          class="w-[5%] h-auto -mt-5 transition-transform duration-500 ease-in-out hover:scale-110 hover:rotate-5"
+          src="/src/assets/me.png"
+        />
+      </div>
 
       <!-- Mobile Toggle Button -->
       <div class="md:hidden z-30">
@@ -18,7 +25,7 @@
       <!-- Navbar Link -->
       <nav
         :class="[
-          `fixed inset-0 z-20 flex flex-col items-center justify-center bg-accent md:relative md:bg-transparent md:flex md:justify-between md:flex-row ${
+          `fixed -mt-3.5 inset-0 z-20 flex flex-col items-center justify-center bg-accent md:relative md:bg-transparent md:flex md:justify-between md:flex-row ${
             isMenuOpen ? 'block' : 'hidden'
           }
                 `,

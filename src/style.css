@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Doto:wght,ROND@100..900,100&family=Rubik+Iso&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Delius&family=Doto:wght,ROND@100..900,100&family=Rubik+Iso&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import 'tailwindcss';
 
 @theme {
@@ -9,9 +9,34 @@
   --font-doto: Doto, 'sans-serif';
   --font-rubik: Rubik Iso, 'system-ui';
   --font-codystar: Codystar, 'system-ui';
+  --font-delius: Delius, 'sans-serif';
+  --font-tinos: Tinos, 'sans-serif';
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.animate-typing {
+  display: inline-block;
+  animation: typing 2s steps(30, end) forwards, blink 0.7s step-end infinite;
+  width: 0;
+  overflow: hidden;
+  border-right: 2px solid;
+  white-space: nowrap;
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
 
 /* Custom reusable class */
 .text-auto {
