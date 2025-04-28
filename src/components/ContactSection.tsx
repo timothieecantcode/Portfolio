@@ -31,10 +31,13 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4">
-      <div className="max-w-4xl mx-auto">
+    <section id="contact" className="py-20 px-4 relative">
+      {/* Corner light effect */}
+      <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-corner-light opacity-30 z-0 animate-light-flash"></div>
+      
+      <div className="max-w-4xl mx-auto relative z-10">
         <motion.h2 
-          className="section-heading"
+          className="section-heading relative"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -55,7 +58,7 @@ const ContactSection: React.FC = () => {
             </p>
             
             <form onSubmit={handleSubmit} className="space-y-5">
-              <div>
+              <div className="relative group">
                 <input
                   type="text"
                   name="name"
@@ -63,11 +66,12 @@ const ContactSection: React.FC = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-dark-100/60 border border-dark-200 rounded-md focus:outline-none focus:ring-1 focus:ring-white/30 transition-colors"
+                  className="w-full px-4 py-3 bg-dark-100/60 border border-dark-200 rounded-md focus-glow transition-all focus:border-white/30"
                 />
+                <div className="absolute inset-0 rounded-md bg-white/5 opacity-0 group-hover:opacity-100 blur-sm transition-opacity -z-10"></div>
               </div>
               
-              <div>
+              <div className="relative group">
                 <input
                   type="email"
                   name="email"
@@ -75,11 +79,12 @@ const ContactSection: React.FC = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-dark-100/60 border border-dark-200 rounded-md focus:outline-none focus:ring-1 focus:ring-white/30 transition-colors"
+                  className="w-full px-4 py-3 bg-dark-100/60 border border-dark-200 rounded-md focus-glow transition-all focus:border-white/30"
                 />
+                <div className="absolute inset-0 rounded-md bg-white/5 opacity-0 group-hover:opacity-100 blur-sm transition-opacity -z-10"></div>
               </div>
               
-              <div>
+              <div className="relative group">
                 <textarea
                   name="message"
                   placeholder="Your Message"
@@ -87,17 +92,15 @@ const ContactSection: React.FC = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-dark-100/60 border border-dark-200 rounded-md focus:outline-none focus:ring-1 focus:ring-white/30 transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-dark-100/60 border border-dark-200 rounded-md focus-glow transition-all focus:border-white/30 resize-none"
                 ></textarea>
+                <div className="absolute inset-0 rounded-md bg-white/5 opacity-0 group-hover:opacity-100 blur-sm transition-opacity -z-10"></div>
               </div>
               
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="px-6 py-3 border border-white rounded-md hover:bg-white/5 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                style={{
-                  boxShadow: '0 0 10px rgba(255, 255, 255, 0.1)'
-                }}
+                className="cta-button disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
@@ -111,7 +114,11 @@ const ContactSection: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="self-center"
           >
-            <div className="glow-card p-8 flex flex-col items-center">
+            <div className="glow-card p-8 flex flex-col items-center relative overflow-hidden group">
+              {/* Inner highlight effect */}
+              <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+              <div className="absolute -top-[150px] -right-[150px] w-[300px] h-[300px] bg-white/5 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
               <h3 className="text-xl font-bold italic mb-6">Connect with me</h3>
               
               <div className="flex space-x-6 mb-6">
@@ -119,46 +126,50 @@ const ContactSection: React.FC = () => {
                   href="https://github.com/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="p-3 border border-dark-200 rounded-full hover:border-white/40 transition-all hover:scale-110"
+                  className="p-3 border border-dark-200 rounded-full hover:border-white/40 transition-all hover:scale-110 group"
                   style={{
                     boxShadow: '0 0 10px rgba(255, 255, 255, 0.05)'
                   }}
                 >
-                  <Github className="w-5 h-5" />
+                  <Github className="w-5 h-5 group-hover:text-white transition-colors" />
+                  <div className="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-100 blur-md -z-10 transition-opacity"></div>
                 </a>
                 
                 <a 
                   href="https://twitter.com/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="p-3 border border-dark-200 rounded-full hover:border-white/40 transition-all hover:scale-110"
+                  className="p-3 border border-dark-200 rounded-full hover:border-white/40 transition-all hover:scale-110 group"
                   style={{
                     boxShadow: '0 0 10px rgba(255, 255, 255, 0.05)'
                   }}
                 >
-                  <Twitter className="w-5 h-5" />
+                  <Twitter className="w-5 h-5 group-hover:text-white transition-colors" />
+                  <div className="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-100 blur-md -z-10 transition-opacity"></div>
                 </a>
                 
                 <a 
                   href="https://linkedin.com/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="p-3 border border-dark-200 rounded-full hover:border-white/40 transition-all hover:scale-110"
+                  className="p-3 border border-dark-200 rounded-full hover:border-white/40 transition-all hover:scale-110 group"
                   style={{
                     boxShadow: '0 0 10px rgba(255, 255, 255, 0.05)'
                   }}
                 >
-                  <Linkedin className="w-5 h-5" />
+                  <Linkedin className="w-5 h-5 group-hover:text-white transition-colors" />
+                  <div className="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-100 blur-md -z-10 transition-opacity"></div>
                 </a>
               </div>
               
-              <div className="text-center">
+              <div className="text-center relative z-10">
                 <p className="text-white/70 mb-1">Or email me at:</p>
                 <a 
                   href="mailto:john@example.com" 
-                  className="text-white hover:underline hover:text-white/90 transition-colors"
+                  className="text-white hover:underline hover:text-white/90 transition-colors relative group"
                 >
                   john@example.com
+                  <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white/50 group-hover:w-full transition-all duration-300"></span>
                 </a>
               </div>
             </div>

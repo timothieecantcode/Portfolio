@@ -62,6 +62,7 @@ export default {
 				glow: {
 					DEFAULT: 'rgba(255, 255, 255, 0.1)',
 					strong: 'rgba(255, 255, 255, 0.25)',
+					intense: 'rgba(255, 255, 255, 0.45)'
 				}
 			},
 			borderRadius: {
@@ -98,11 +99,22 @@ export default {
 				},
 				'glow-pulse': {
 					'0%, 100%': { 
-						boxShadow: '0 0 5px rgba(255, 255, 255, 0.1), 0 0 10px rgba(255, 255, 255, 0.05)'
+						boxShadow: '0 0 10px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 0.05)'
 					},
 					'50%': { 
-						boxShadow: '0 0 15px rgba(255, 255, 255, 0.2), 0 0 25px rgba(255, 255, 255, 0.1)'
+						boxShadow: '0 0 25px rgba(255, 255, 255, 0.2), 0 0 40px rgba(255, 255, 255, 0.1)'
 					}
+				},
+				'light-flash': {
+					'0%': { opacity: '0.4' },
+					'25%': { opacity: '0.6' },
+					'50%': { opacity: '0.8' },
+					'75%': { opacity: '0.6' },
+					'100%': { opacity: '0.4' }
+				},
+				'soft-rotate': {
+					'0%, 100%': { transform: 'rotate(-2deg)' },
+					'50%': { transform: 'rotate(2deg)' }
 				}
 			},
 			animation: {
@@ -111,13 +123,27 @@ export default {
 				'scroll-left': 'scroll-left 25s linear infinite',
 				'scroll-right': 'scroll-right 25s linear infinite',
 				'fade-in-up': 'fade-in-up 0.6s ease-out',
-				'glow-pulse': 'glow-pulse 4s ease-in-out infinite'
+				'glow-pulse': 'glow-pulse 4s ease-in-out infinite',
+				'light-flash': 'light-flash 8s infinite',
+				'soft-rotate': 'soft-rotate 10s ease-in-out infinite'
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
 			},
 			backdropBlur: {
 				xs: '2px',
+			},
+			boxShadow: {
+				'glow-sm': '0 0 10px rgba(255, 255, 255, 0.15)',
+				'glow-md': '0 0 20px rgba(255, 255, 255, 0.2)',
+				'glow-lg': '0 0 30px rgba(255, 255, 255, 0.25)',
+				'glow-xl': '0 0 40px rgba(255, 255, 255, 0.3)',
+				'inner-glow-sm': 'inset 0 0 10px rgba(255, 255, 255, 0.1)',
+				'inner-glow-md': 'inset 0 0 20px rgba(255, 255, 255, 0.15)'
+			},
+			backgroundImage: {
+				'radial-glow': 'radial-gradient(circle at top left, rgba(255, 255, 255, 0.15) 0%, transparent 60%)',
+				'corner-light': 'linear-gradient(135deg, rgba(255, 255, 255, 0.35) -10%, transparent 50%)'
 			}
 		}
 	},
