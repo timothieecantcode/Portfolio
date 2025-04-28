@@ -18,45 +18,76 @@ const Index: React.FC = () => {
         exit={{ opacity: 0 }}
         className="bg-dark min-h-screen relative"
       >
-        {/* Light source effect */}
-        <div className="light-source animate-light-flash"></div>
+        {/* Enhanced premium light source effects */}
+        <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">
+          {/* Main light source */}
+          <div className="absolute -top-[30vh] -left-[30vh] w-[80vh] h-[80vh] rounded-full bg-radial-glow-premium opacity-60 animate-glow-pulse"></div>
+          
+          {/* Secondary light source */}
+          <div className="absolute top-[70vh] -right-[20vh] w-[50vh] h-[50vh] rounded-full bg-radial-glow-premium opacity-40 animate-glow-pulse" style={{ animationDelay: '2s' }}></div>
+          
+          {/* Premium light rays */}
+          <div className="light-ray-premium" style={{ 
+            top: '15vh', 
+            left: 0, 
+            width: '40vw', 
+            transform: 'rotate(30deg)',
+            opacity: 0.2
+          }}></div>
+          
+          <div className="light-ray-premium" style={{ 
+            top: '35vh', 
+            left: 0, 
+            width: '60vw', 
+            transform: 'rotate(15deg)',
+            opacity: 0.15,
+            animationDelay: '1s'
+          }}></div>
+          
+          <div className="light-ray-premium" style={{ 
+            top: '65vh', 
+            left: 0, 
+            width: '50vw', 
+            transform: 'rotate(-10deg)',
+            opacity: 0.12,
+            animationDelay: '2s'
+          }}></div>
+          
+          {/* Floating glow orbs */}
+          <div className="absolute w-[100px] h-[100px] rounded-full bg-white/5 blur-xl animate-float" style={{ 
+            top: '20vh', 
+            left: '30vw',
+            animationDelay: '0s'
+          }}></div>
+          
+          <div className="absolute w-[80px] h-[80px] rounded-full bg-white/5 blur-xl animate-float" style={{ 
+            top: '60vh', 
+            right: '25vw',
+            animationDelay: '1.5s'
+          }}></div>
+        </div>
         
-        {/* Light rays */}
-        <div className="light-ray" style={{ 
-          top: '20vh', 
-          left: 0, 
-          width: '30vw', 
-          transform: 'rotate(30deg)',
-          opacity: 0.1
-        }}></div>
-        
-        <div className="light-ray" style={{ 
-          top: '40vh', 
-          left: 0, 
-          width: '50vw', 
-          transform: 'rotate(15deg)',
-          opacity: 0.05
-        }}></div>
-        
-        <div className="light-ray" style={{ 
-          top: '60vh', 
-          left: 0, 
-          width: '40vw', 
-          transform: 'rotate(-10deg)',
-          opacity: 0.07
-        }}></div>
-        
-        <header className="fixed w-full top-0 z-50 bg-dark/80 backdrop-blur-sm border-b border-dark-200">
+        <header className="fixed w-full top-0 z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <h1 className="text-xl font-bold italic">John Doe</h1>
             <nav className="hidden md:block">
               <ul className="flex space-x-8">
-                <li><a href="#projects" className="hover:text-white/70 transition-colors hover:text-shadow-sm">Projects</a></li>
-                <li><a href="#contact" className="hover:text-white/70 transition-colors hover:text-shadow-sm">Contact</a></li>
+                <li>
+                  <a href="#projects" className="hover:text-white transition-colors relative group">
+                    Projects
+                    <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white/30 group-hover:w-full transition-all duration-300"></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" className="hover:text-white transition-colors relative group">
+                    Contact
+                    <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white/30 group-hover:w-full transition-all duration-300"></span>
+                  </a>
+                </li>
                 <li>
                   <a 
                     href="/resume.pdf" 
-                    className="cta-button text-sm px-4 py-1"
+                    className="cta-button-premium text-sm px-4 py-1"
                   >
                     Resume
                   </a>
@@ -76,7 +107,7 @@ const Index: React.FC = () => {
           <ContactSection />
         </main>
         
-        <footer className="py-12 px-4 border-t border-dark-200 relative z-10">
+        <footer className="py-12 px-4 border-t border-white/10 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <p className="text-white/60">
               © {new Date().getFullYear()} John Doe. All rights reserved.
