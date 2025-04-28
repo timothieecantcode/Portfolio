@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { GitHub, Twitter, Linkedin } from 'lucide-react';
+import { Github, Twitter, Linkedin } from 'lucide-react';
 import { toast } from 'sonner';
 
 const ContactSection: React.FC = () => {
@@ -124,7 +124,7 @@ const ContactSection: React.FC = () => {
                     boxShadow: '0 0 10px rgba(255, 255, 255, 0.05)'
                   }}
                 >
-                  <GitHub className="w-5 h-5" />
+                  <Github className="w-5 h-5" />
                 </a>
                 
                 <a 
