@@ -1,27 +1,27 @@
 
 import React from 'react';
 import { 
-  Github, React as ReactIcon, Code, Database, 
-  Server, Docker, Cpu, Cloud, TerminalSquare, 
-  PenTool, Layers, Verified, Award, LineChart
+  Github, Code2, Database, 
+  ServerCrash, Container, Cpu, Cloud, Terminal, 
+  Paintbrush, Layers, CheckCircle, Award, BarChart3
 } from 'lucide-react';
 
 const TechMarquee: React.FC = () => {
   const techStackRow1 = [
-    { name: "React", icon: <ReactIcon className="w-5 h-5 mr-2" /> },
-    { name: "Next.js", icon: <Code className="w-5 h-5 mr-2" /> },
-    { name: "Node.js", icon: <Server className="w-5 h-5 mr-2" /> },
-    { name: "TailwindCSS", icon: <PenTool className="w-5 h-5 mr-2" /> },
+    { name: "React", icon: <Code2 className="w-5 h-5 mr-2" /> },
+    { name: "Next.js", icon: <Code2 className="w-5 h-5 mr-2" /> },
+    { name: "Node.js", icon: <ServerCrash className="w-5 h-5 mr-2" /> },
+    { name: "TailwindCSS", icon: <Paintbrush className="w-5 h-5 mr-2" /> },
     { name: "PostgreSQL", icon: <Database className="w-5 h-5 mr-2" /> },
     { name: "AWS", icon: <Cloud className="w-5 h-5 mr-2" /> },
-    { name: "Docker", icon: <Docker className="w-5 h-5 mr-2" /> },
+    { name: "Docker", icon: <Container className="w-5 h-5 mr-2" /> },
     { name: "GraphQL", icon: <Cpu className="w-5 h-5 mr-2" /> }
   ];
   
   const techStackRow2 = [
     { name: "Java", icon: <Cpu className="w-5 h-5 mr-2" /> },
-    { name: "Python", icon: <TerminalSquare className="w-5 h-5 mr-2" /> },
-    { name: "TypeScript", icon: <Code className="w-5 h-5 mr-2" /> },
+    { name: "Python", icon: <Terminal className="w-5 h-5 mr-2" /> },
+    { name: "TypeScript", icon: <Code2 className="w-5 h-5 mr-2" /> },
     { name: "MongoDB", icon: <Database className="w-5 h-5 mr-2" /> },
     { name: "Redis", icon: <Database className="w-5 h-5 mr-2" /> },
     { name: "Kubernetes", icon: <Layers className="w-5 h-5 mr-2" /> },
