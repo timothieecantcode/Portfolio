@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
@@ -14,27 +13,27 @@ const BlogSection: React.FC = () => {
   const blogPosts: BlogPost[] = [
     {
       id: 1,
-      title: "Blog 1",
+      title: "How I solved 300+ LeetCode problems in 3 months",
       url: "#",
-      date: "March XX, 202X"
+      date: "March 15, 2023"
     },
     {
       id: 2,
-      title: "Blog 2",
+      title: "10 SaaS UI Patterns You Should Steal Today",
       url: "#",
-      date: "February XX, 202X"
+      date: "February 22, 2023"
     },
     {
       id: 3,
-      title: "Blog 3",
+      title: "My journey from a 2⭐ to 5⭐ coder on CodeChef",
       url: "#",
-      date: "January XX, 202X"
+      date: "January 10, 2023"
     },
     {
       id: 4,
-      title: "Blog 4",
+      title: "Building a real-time collaborative editor with WebSockets",
       url: "#",
-      date: "December XX, 202X"
+      date: "December 5, 2022"
     }
   ];
 
