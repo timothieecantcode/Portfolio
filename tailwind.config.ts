@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -81,21 +80,12 @@ export default {
 					to: { height: '0' }
 				},
 				'scroll-left': {
-<<<<<<< HEAD
 					'0%': { transform: 'translateX(-50%)' },
 					'100%': { transform: 'translateX(0%)' }
 				},
 				'scroll-right': {
 					'0%': { transform: 'translateX(0%)' },
 					'100%': { transform: 'translateX(-50%)' }
-=======
-					'0%': { transform: 'translateX(0)' },
-					'100%': { transform: 'translateX(-100%)' }
-				},
-				'scroll-right': {
-					'0%': { transform: 'translateX(-100%)' },
-					'100%': { transform: 'translateX(0)' }
->>>>>>> 63daada7ccc444ad18e85af95b698bd8360336c9
 				},
 				'fade-in-up': {
 					'0%': { 
@@ -152,13 +142,8 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-<<<<<<< HEAD
 				'scroll-left': 'scroll-right 20s linear infinite',
 				'scroll-right': 'scroll-left 20s linear infinite',
-=======
-				'scroll-left': 'scroll-left 25s linear infinite',
-				'scroll-right': 'scroll-right 25s linear infinite',
->>>>>>> 63daada7ccc444ad18e85af95b698bd8360336c9
 				'fade-in-up': 'fade-in-up 0.6s ease-out',
 				'glow-pulse': 'glow-pulse 4s ease-in-out infinite',
 				'light-flash': 'light-flash 8s infinite',

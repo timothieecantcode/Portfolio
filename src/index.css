@@ -89,7 +89,7 @@
   }
 
   .glow-card:hover::before {
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.7) 50%, transparent 100%);
   }
 
   .glass-effect {
