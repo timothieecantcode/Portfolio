@@ -54,12 +54,12 @@ export default {
 				},
 				// Custom theme colors
 				dark: {
-					DEFAULT: '#000000',
+					DEFAULT: '#181818',
 					100: '#1A1A1A',
 					200: '#333333',
 				},
 				glow: {
-					DEFAULT: 'rgba(255, 255, 255, 0.1)',
+					DEFAULT: 'rgba(223, 20, 20, 0.1)',
 					strong: 'rgba(255, 255, 255, 0.25)',
 					intense: 'rgba(255, 255, 255, 0.45)',
 					premium: 'rgba(255, 255, 255, 0.7)'
@@ -88,21 +88,21 @@ export default {
 					'100%': { transform: 'translateX(-50%)' }
 				},
 				'fade-in-up': {
-					'0%': { 
+					'0%': {
 						opacity: '0',
 						transform: 'translateY(10px)'
 					},
-					'100%': { 
+					'100%': {
 						opacity: '1',
 						transform: 'translateY(0)'
 					}
 				},
 				'glow-pulse': {
-					'0%, 100%': { 
+					'0%, 100%': {
 						opacity: '0.5',
 						filter: 'blur(60px)'
 					},
-					'50%': { 
+					'50%': {
 						opacity: '0.8',
 						filter: 'blur(80px)'
 					}
@@ -123,18 +123,18 @@ export default {
 					'50%': { transform: 'translateY(-10px)' }
 				},
 				'pulse-shadow': {
-					'0%, 100%': { 
+					'0%, 100%': {
 						boxShadow: '0 0 30px rgba(255, 255, 255, 0.15)'
 					},
-					'50%': { 
+					'50%': {
 						boxShadow: '0 0 50px rgba(255, 255, 255, 0.25)'
 					}
 				},
 				'text-shimmer': {
-					'0%': { 
+					'0%': {
 						backgroundPosition: '-200% 0'
 					},
-					'100%': { 
+					'100%': {
 						backgroundPosition: '200% 0'
 					}
 				}
